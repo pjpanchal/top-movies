@@ -1,0 +1,10 @@
+.has-error span.form-error{ display: block;margin: 10px 0;color: #F00;}
+.celebs_form{font-size: 15px;line-height: 29px;}
+.celebs_form td{border-bottom: 1px solid #dfdfdf;padding: 15px 0;}
+
+.celebs_form input[type=text],
+.celebs_form input[type=search],
+.celebs_form input[type=email], .celebs_form select, .celebs_form textarea{width: 100%;font-size: 15px;padding: 7px;min-height: 40px;}
+.celebs_form textarea{min-height:100px;} 
+.movie_meta{border:1px dotted #000; text-align:left; padding:10px;margin:20px 0}
+.movie_meta p{padding-bottom: 8px;font-size: 18px;}
