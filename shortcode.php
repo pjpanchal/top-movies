@@ -34,17 +34,14 @@ function top_movies_list( $atts ) {
 						<?php if(!empty($movie_actor)){ echo "Actor  : " .$movie_actor; } ?></br>
 						<?php if(!empty($movie_rating)){ echo "Rating 5 /  " .$movie_rating; } ?></p>
 				</div>
-				
             </li>
-            <?php endwhile;
-            wp_reset_postdata(); ?>
+            <?php
+			endwhile;
+            wp_reset_postdata();
+			?>
         </ul>
     <?php $myvariable = ob_get_clean();
     return $myvariable;
     }
 }
 ?>
-<style>
-ul.movie-reviews-listing li{list-style: none;width: 32%;display: inline-block;vertical-align: top;padding: 1%;}
-ul.movie-reviews-listing li .movie_pic{max-height: 109px;overflow: hidden;}
-</style>

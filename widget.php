@@ -66,10 +66,7 @@ public function widget( $args, $instance )
 				),
 			);
 		}
-		
-		
 		$custom_posts = new WP_Query($args);
-		
 		while ($custom_posts->have_posts()) : $custom_posts->the_post();
 		?>
 		<div class="movie_block">
@@ -95,7 +92,6 @@ public function widget( $args, $instance )
 }
 /* END WIDGET FRONTEND*/
 
-		
 /* WIDGET BACK END*/
 public function form( $instance ) 
 {

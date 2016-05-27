@@ -90,9 +90,8 @@ function display_movie_review_meta_box( $movie_review ) {
             </td>
         </tr>
     </table>
-    <?php
+<?php
 }
-
 /* SAVE POST */
 add_action( 'save_post', 'add_top_movie_fields', 10, 2 );
 function add_top_movie_fields( $movie_review_id, $movie_review ) {
@@ -138,7 +137,6 @@ function add_top_movie_fields( $movie_review_id, $movie_review ) {
         return number_format($n);
    }
    
-   
  /* For Custom Single.php file for Movies */  
  function get_custom_post_type_template($single_template) {
      global $post;
@@ -163,9 +161,7 @@ function add_posttype_slug_template( $single_template )
 }
 add_filter( 'single_template', 'add_posttype_slug_template', 10, 1 );
 
-
 /* SHOW METAS ONLY  IF SINGLE POST IS MOVIE */
-
 function insert_movie_meta($content) {
    if(is_singular( 'movie_reviews')) 
    {
@@ -179,7 +175,6 @@ function insert_movie_meta($content) {
    return $content;
 }
 add_filter ('the_content', 'insert_movie_meta');
-
 
 /* INCLUDE FILES */
 function wpdocs_enqueue_movie_admin_files() {
@@ -197,9 +192,7 @@ function wpdocs_enqueue_movie_css_files() {
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_enqueue_movie_css_files' );
 
-/* INCLUDE WIDGET FILE*/
-include ("widget.php");
-
-/* INCLUDE Shortcode FILE*/
-include ("shortcode.php");
+/* INCLUDE WIDGET & SHORTCODE FILE*/
+include( plugin_dir_path( __FILE__ ) . 'widget.php');
+include( plugin_dir_path( __FILE__ ) . 'shortcode.php');
 ?>

@@ -8,3 +8,5 @@
 .celebs_form textarea{min-height:100px;} 
 .movie_meta{border:1px dotted #000; text-align:left; padding:10px;margin:20px 0}
 .movie_meta p{padding-bottom: 8px;font-size: 18px;}
+ul.movie-reviews-listing li{list-style: none;width: 32%;display: inline-block;vertical-align: top;padding: 1%;}
+ul.movie-reviews-listing li .movie_pic{max-height: 109px;overflow: hidden;}
